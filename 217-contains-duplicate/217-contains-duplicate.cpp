@@ -1,26 +1,18 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        std::map<int, int> hash_nums;
-        int key = 0;
-        int value = 0;
- 
-        for (auto &num: nums)
-        {
-            // check if key `num` exists in the map or not
-            std::map<int, int>::iterator it = hash_nums.find(num);
- 
-            // key already present on the map
-            if (it != hash_nums.end()) {
+        
+        int length = nums.size();
+        sort(nums.begin(), nums.end());
+        
+        for(int i=0; i<length-1; i++){
+            
+            if(nums[i]==nums[i+1]){
                 return true;
             }
-            // key not found
-            else {
-                hash_nums.insert(std::make_pair(num, 1));
-            }
+            
         }
- 
-    return false;
         
-    }
+        return false;
+    }    
 };
