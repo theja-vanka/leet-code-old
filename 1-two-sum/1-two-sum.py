@@ -5,8 +5,7 @@ class Solution:
         for index, value in enumerate(nums):
             if value in difftarget.keys():
                 return [index, difftarget[value]]
-            else:
-                difftarget[target-value] = index
+            difftarget[target-value] = index
         
             
             
