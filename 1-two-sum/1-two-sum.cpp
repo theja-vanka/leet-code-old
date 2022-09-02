@@ -3,7 +3,7 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         
         map<int, int> diffTarget;
-        vector<int> returnValue;
+        vector<int> returnValue = {-1, -1};
         
         for(int i=0; i<nums.size(); i++){
             
@@ -14,7 +14,7 @@ public:
                 return returnValue;
             }
             
-            diffTarget.insert(pair<int, int>(target-nums[i], i));
+            diffTarget[target-nums[i]] =  i;
         
         }
         return returnValue;
