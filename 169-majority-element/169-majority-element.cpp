@@ -4,7 +4,6 @@ public:
         int count = 0;
         int candidate;
         for(auto num: nums){
-            cout << num << endl;
             if(count == 0){
                 candidate = num; 
             }
