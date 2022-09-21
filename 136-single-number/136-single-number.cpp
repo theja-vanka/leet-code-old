@@ -1,7 +1,11 @@
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        return 2*sum(set(nums)) - sum(nums)
-        
-        
-            
-        
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int ans=0;
+        for(auto i: nums){
+	        ans^=i;
+        }
+        return ans;
+    }
+
+};
