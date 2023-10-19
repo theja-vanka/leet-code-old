@@ -4,9 +4,9 @@ class Solution:
         Do not return anything, modify nums1 in-place instead.
         """
 
-        total = m + n - 1
-        m_index = m - 1
-        n_index = n - 1
+        total: int = m + n - 1
+        m_index: int = m - 1
+        n_index: int = n - 1
 
         while n_index >= 0:
             if m_index >= 0 and nums1[m_index] > nums2[n_index]:
