@@ -6,13 +6,13 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
-        carry = 0
-        base = 0
+        carry: int = 0
+        base: int = 0
 
         base = l1.val + l2.val
         carry, base = divmod(base, 10)
-        suml = ListNode(base)
-        returnl = suml
+        suml: Optional[ListNode] = ListNode(base)
+        returnl: Optional[ListNode] = suml
         l1 = l1.next
         l2 = l2.next
         while l1 is not None and l2 is not None:
